@@ -63,20 +63,60 @@ function App() {
                 <span className="match-status">live</span>
               </div>
               <span className="header__team-icon">
+<<<<<<< HEAD
                 <img src={teamIcon} alt="The badge identifying the team looks like a crown." className="icon"/>
                 <p className="command-name">Command #2</p>
+=======
+                <p className="command-name">Command #2</p>
+                <img src={teamIcon} alt="The badge identifying the team looks like a crown." className="icon"/>
+>>>>>>> Laptop
               </span>
             </div>
             <span className="container__opener"><img src={arrow} alt="arrow button" className="arrow" /></span>
           </header>
           <div className="container__team">
             <div className="team-away">
+<<<<<<< HEAD
             <div className="player-container"></div>
             <div className="stat-info"></div>
               </div>
           <div className='team-home'>
             <div className="player-container"></div>
             <div className="stat-info"></div>
+=======
+            <div className="player-container">
+              {
+                matches[0].homeTeam.players.map((player, index) => (
+                  <div key={index} className='player' id={player.username}>
+                    <p>{player.username}</p>
+                    <p>{player.kill}</p>
+                  </div>
+                ))
+              }
+            </div>
+            <div className="stat-info">
+              <span className="stat" id="points">{matches[0].awayTeam.points}</span>
+              <span className="stat" id="place">{matches[0].awayTeam.place}</span>
+              <span className="stat" id="total_kill">{matches[0].awayTeam['total_kills']}</span>
+            </div>
+              </div>
+          <div className='team-home'>
+            <div className="player-container">
+              {
+                matches[0].homeTeam.players.map((player, index) => (
+                  <div key={index} className='player' id={player.username}>
+                    <p>{player.username}</p>
+                    <p>{player.kill}</p>
+                  </div>
+                ))
+              }
+            </div>
+            <div className="stat-info">
+              <span className="stat" id="points">{matches[0].homeTeam.points}</span>
+              <span className="stat" id="place">{matches[0].homeTeam.place}</span>
+              <span className="stat" id="total_kill">{matches[0].homeTeam['total_kills']}</span>
+            </div>
+>>>>>>> Laptop
           </div>
           </div>
         </section>

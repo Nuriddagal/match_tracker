@@ -1,6 +1,6 @@
 import { useState, useEffect} from 'react'
-import teamIcon from "../public/icon.svg"
-import arrow from "../public/arrow.svg"
+import teamIcon from "./assets/icon.svg"
+import arrow from "./assets/arrow.svg"
 import './App.css'
 interface Player {
   "kill": number,
@@ -63,27 +63,14 @@ function App() {
                 <span className="match-status">live</span>
               </div>
               <span className="header__team-icon">
-<<<<<<< HEAD
-                <img src={teamIcon} alt="The badge identifying the team looks like a crown." className="icon"/>
-                <p className="command-name">Command #2</p>
-=======
                 <p className="command-name">Command #2</p>
                 <img src={teamIcon} alt="The badge identifying the team looks like a crown." className="icon"/>
->>>>>>> Laptop
               </span>
             </div>
             <span className="container__opener"><img src={arrow} alt="arrow button" className="arrow" /></span>
           </header>
           <div className="container__team">
             <div className="team-away">
-<<<<<<< HEAD
-            <div className="player-container"></div>
-            <div className="stat-info"></div>
-              </div>
-          <div className='team-home'>
-            <div className="player-container"></div>
-            <div className="stat-info"></div>
-=======
             <div className="player-container">
               {
                 matches[0].homeTeam.players.map((player, index) => (
@@ -116,7 +103,6 @@ function App() {
               <span className="stat" id="place">{matches[0].homeTeam.place}</span>
               <span className="stat" id="total_kill">{matches[0].homeTeam['total_kills']}</span>
             </div>
->>>>>>> Laptop
           </div>
           </div>
         </section>

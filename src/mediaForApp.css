@@ -75,8 +75,6 @@
     .tracker-logo{
         width: 250px;
     }
-}
-@media (max-width: 566px) {
     .versus-text{
         display: flex;
         justify-content: center;
@@ -84,6 +82,8 @@
     .devider{
         width: 80%;
     }
+}
+@media (max-width: 566px) {
     .player{
         height: 81px;
         font-size: 12px;

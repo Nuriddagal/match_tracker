@@ -17,7 +17,7 @@ export default function Match({match, icons, classNames, ind}: MyProps) {
     return(
     <>
     <section className={`container ${classNames !== undefined?classNames[0]: ""}`} key={ind}>
-        <header onClick={opener} className="container__header header">
+        <header onClick={opener} className="container__header">
             <div className="header__wrapper">
                 <div className="header__team-icon">
                     <img src={icons.teamIcon} alt="The badge identifying the team looks like a crown." className="icon"/>

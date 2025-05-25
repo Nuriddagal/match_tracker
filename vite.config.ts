@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    assetsDir: './public/CNAME'
+    assetsDir: './'
   },
   base: 'match_tracker',
 })

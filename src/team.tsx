@@ -1,9 +1,13 @@
+// Типы (Typescript)
 import type { Team} from "./MatchTypes";
+// Компонента
 import Players from "./Player";
+// Интерфейс для пропсов
 interface MyProperties {
     team: Team,
     icon: string,
 }
+// Экспорт компоненты по-умолчанию
 export default function Team ({team, icon}: MyProperties) {
     return(
         <>

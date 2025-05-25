@@ -1,8 +1,11 @@
+// Типы (Typescript)
 import type { Player } from "./MatchTypes";
+// Интерфейс для пропсов
 type PlayerProps = {
     players: Player[],
     icon: string
 }
+// Экспорт компоненты по умолчанию
 export default function Players({players, icon}: PlayerProps) {
     return (
         <>

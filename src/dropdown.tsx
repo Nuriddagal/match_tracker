@@ -1,7 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import arrowDown from "./assets/arrowdown2.svg"
-export function Dropdown() {
-const [selectedItem, setSelectedItem] = useState<string>("All status")
+interface dropdownProps{
+    selectedItem: string,
+    setSelectedItem: React.Dispatch<React.SetStateAction<string>>
+}
+export function Dropdown({selectedItem, setSelectedItem}: dropdownProps) {
 const [isOpen, setIsOpen] = useState(false);
 const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -18,23 +21,6 @@ useEffect(() => {
         setIsOpen(false);
     }
     };
-    const selectedItemVisible = (e: MouseEvent,) =>{
-        if(!e.currentTarget) return;
-        const target = e.currentTarget as HTMLElement;
-        const statusParent: HTMLElement[] | null = Array.from(target.querySelectorAll<HTMLElement>(`.container`));
-        statusParent?.map((p) =>{
-            p.querySelector('.match-status')
-        })
-        // const matchStatus: (HTMLElement | null)[] = statusParent?.map((p) => p.querySelector<HTMLElement>(".match-status"));
-        // const matchStatusClasses: (string[] | undefined)[] | null | undefined = matchStatus?.map((s) => s?.className.split(" ") )
-        // if(selectedItem === "All status") {
-        //     statusParent?.map((p) => p.classList.remove("hide"))
-        // };
-        // if(!matchStatusClasses?.includes(selectedItem)){
-        //     statusParent?.classList.toggle('hide')
-        // }
-    }
-    document.addEventListener('mousedown', selectedItemVisible)
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [selectedItem]);

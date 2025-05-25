@@ -67,7 +67,7 @@
         height: 56px;
     }
     .dropdown-menu, .dropdown-item{
-        width: 400px;
+        width: 100%;
     }
     .tracker-logo{
         width: 250px;

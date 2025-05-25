@@ -15,6 +15,7 @@ import refresh from './assets/Refresh.svg';
 
 
 // 5. Стили
+import data from '/api/data.json?url'
 import './App.css';
 import './mediaForApp.css'
 
@@ -33,7 +34,7 @@ function App() {
       setIsFetching(true)
       setLoad('rotate')
       try{
-        const response = await fetch("https://app.ftoyd.com/fronttemp-service/fronttemp")
+        const response = await fetch(data)
       if(!response.ok){
         setIsErr(true)
         throw new Error(`http error ${response.status}`);
@@ -50,9 +51,11 @@ function App() {
       setLoad('')
     }
     }
+    
   useEffect(() => {
     // Вызов функции
-    fetchData()
+    
+    setTimeout(() => fetchData(), 2000)
   }, [])
   // Загрузочное состояние при отсутствии данных
   if(matches.length === 0){

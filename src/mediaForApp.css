@@ -2,9 +2,6 @@
     .container-team{
         flex-wrap: nowrap;
     }
-    .open{
-        height: 420px;
-    }
 }
 @media (max-width: 968px) {
     .container__team{

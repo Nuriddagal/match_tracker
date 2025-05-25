@@ -168,8 +168,10 @@ main {
   width: 33%;
   padding: 15px;
   height: 52px;
+  max-height: fit-content;
   background-color: #101318;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 5px;
   box-sizing: border-box;

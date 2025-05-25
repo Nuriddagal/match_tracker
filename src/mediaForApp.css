@@ -1,4 +1,12 @@
-@media (max-width: 768px) {
+@media (min-width: 962px) {
+    .container-team{
+        flex-wrap: nowrap;
+    }
+    .open{
+        height: 420px;
+    }
+}
+@media (max-width: 968px) {
     .container__team{
         flex-wrap: wrap;
         gap:5px
@@ -8,7 +16,6 @@
     }
     .player{
         height: 81px;
-        flex-wrap: wrap;
         justify-content: center;
     }
     .command-name{

@@ -45,7 +45,7 @@ export default function Match({match, classNames, ind}: MyProps) {
         </header>
         <div className="container__team">
             <Team team={match.awayTeam} icon={userIcon}></Team>
-    {windowWidth <= 768 && <div className="versus-text"><img className="devider" src={devider} alt="Versus svg" /></div>}
+    {windowWidth <= 968 && <div className="versus-text"><img className="devider" src={devider} alt="Versus svg" /></div>}
             <Team team={match.homeTeam} icon={userIcon}></Team>
         </div>
         </section>
